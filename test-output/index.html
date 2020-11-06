@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite-1">
-              <span class="suite-name border-failed">Suite-1</span>
+              <span class="suite-name border-passed">Suite-1</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,21 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite-1" class="hide-methods failed suite-Suite-1"> (hide)</a> <!-- hide-methods failed suite-Suite-1 -->
-                      <a href="#" panel-name="suite-Suite-1" class="show-methods failed suite-Suite-1"> (show)</a> <!-- show-methods failed suite-Suite-1 -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Suite-1" class="hide-methods passed suite-Suite-1"> (hide)</a> <!-- hide-methods passed suite-Suite-1 -->
+                      <a href="#" panel-name="suite-Suite-1" class="show-methods passed suite-Suite-1"> (show)</a> <!-- show-methods passed suite-Suite-1 -->
                     </span>
-                    <div class="method-list-content failed suite-Suite-1">
+                    <div class="method-list-content passed suite-Suite-1">
                       <span>
-                        <img width="3%" src="failed.png"/>
+                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite-1" title="TestCases.LoginTestCases" hash-for-method="TEST_CASE_ONE">TEST_CASE_ONE</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Suite-1 -->
+                    </div> <!-- method-list-content passed suite-Suite-1 -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -117,9 +117,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite-1" class="panel Suite-1">
-          <div class="suite-Suite-1-class-failed">
+          <div class="suite-Suite-1-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="passed.png"/>
               <span class="class-name">TestCases.LoginTestCases</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -128,18 +128,14 @@
                   <a name="TEST_CASE_ONE">
                   </a> <!-- TEST_CASE_ONE -->
                   <span class="method-name">TEST_CASE_ONE</span>
-                  <div class="stack-trace">java.lang.NullPointerException
-	at TestCases.LoginTestCases.TEST_CASE_ONE(LoginTestCases.java:11)
-... Removed 25 stack frames
-</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-1-class-failed -->
+          </div> <!-- suite-Suite-1-class-passed -->
         </div> <!-- panel Suite-1 -->
         <div panel-name="test-xml-Suite-1" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/Users/admin/Downloads/Appium-PageObject-Mobile-Automation-master/testCase.xml</span>
+            <span class="header-content">/Users/admin/tvGame/AppiumTVGame/testCase.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -195,12 +191,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'TEST_CASE_ONE')
 data.setCell(0, 2, 'TestCases.LoginTestCases')
-data.setCell(0, 3, 1118);
+data.setCell(0, 3, 19122);
 window.suiteTableData['Suite-1']= { tableData: data, tableDiv: 'times-div-Suite-1'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <span class="suite-total-time">Total running time: 19 seconds</span>
               <div id="times-div-Suite-1">
               </div> <!-- times-div-Suite-1 -->
             </div> <!-- times-div -->
@@ -232,14 +228,12 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">TEST_CASE_ONE</span>
-                <span class="method-start">66841 ms</span>
+                <span class="method-start">12932 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-suite after">
                 <span class="method-name">destroyDriver</span>
-                <span class="method-start">73207 ms</span>
+                <span class="method-start">32314 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

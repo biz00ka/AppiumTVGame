@@ -19,8 +19,11 @@ public class HomePage extends BasePageClass {
     @AndroidFindBy(id = BUY_BTN)
     MobileElement but_Btn;
 
-    @AndroidFindBy(id = SEARCH_BTN)
+    @AndroidFindBy(id = "com.android.vending:id/text_container")
     MobileElement search_Btn;
+    
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Search for apps & games']")
+    MobileElement searchBar;
 
     public HomePage(AndroidDriver driver) {
         super(driver);
@@ -35,6 +38,6 @@ public class HomePage extends BasePageClass {
     }
 
     public void search_Btn() {
-        androidHelperMethods.click(search_Btn);
+        androidHelperMethods.click(searchBar);
     }
 }
