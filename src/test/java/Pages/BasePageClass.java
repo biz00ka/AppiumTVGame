@@ -15,7 +15,7 @@ class BasePageClass {
 
     public BasePageClass(AndroidDriver driver) {
         this.androidDriver = driver;
-        PageFactory.initElements(new AppiumFieldDecorator(androidDriver, 15, TimeUnit.SECONDS), this);
+        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
         androidHelperMethods= new AndroidHelperMethods(androidDriver);
     }
 }

@@ -3,15 +3,25 @@ package TestCases;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import io.appium.java_client.MobileBy;
+
 public class LoginTestCases extends BaseTest {
 
 
     @Test
     public void TEST_CASE_ONE() throws Exception {
-        homePage.allowContinue_Btn();
-        homePage.buyBtn();
-        homePage.search_Btn();
-        buyPage.click_two_Bhk();
-        buyPage.click_three_Bhk();
+    	System.out.println("app name is :: "+appName);
+        homePage.searchAppInPlayStore(appName);
+        homePage.selectAppFromPlaystore();
+        homePage.waitForInstall();
+        releaseDriver();
+        getNewDriver();
+
+    }
+    
+    @Test
+    public void TEST_CASE_TWO() throws Exception {
+    	System.out.println("");
+        
     }
 }

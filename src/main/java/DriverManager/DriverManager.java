@@ -7,21 +7,39 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import util.utility;
 
 import java.util.Properties;
+import java.net.MalformedURLException;
 import java.net.URL;
 
 public class DriverManager {
-    static Properties properties;
-    public static AndroidDriver driver;
-    static DesiredCapabilities capabilities;
+	static Properties properties;
+	public static AndroidDriver driver;
+	static DesiredCapabilities capabilities;
+	public static String propertyPath = System.getProperty("user.dir") + "//src//main//resources//android.properties";
 
-    public static WebDriver getDriver(DriverManagerType browserName) throws Exception {
-        switch (browserName.getDriver()) {
-            case "AndroidDriver":
-                String propertyPath = System.getProperty("user.dir") + "//src//main//resources//android.properties";
-                return driver = new AndroidDriverManager().getAndroidDriver(propertyPath);
+	public static AndroidDriver getDriver(DriverManagerType browserName) throws Exception {
+		switch (browserName.getDriver()) {
+		case "AndroidDriver":
+			driver = new AndroidDriverManager(propertyPath).getAndroidDriver();
+			return driver;
+		}
+		return driver;
+	}
 
-        }
-        return null;
-    }
+	public static DesiredCapabilities getCapability() throws Exception {
+
+		return capabilities = new AndroidDriverManager(propertyPath).installedAppCaps();
+
+	}
+	
+	public static AndroidDriver getDriver(DriverManagerType browserName, DesiredCapabilities caps) throws Exception
+	{
+		switch (browserName.getDriver()) {
+		case "AndroidDriver":
+
+			driver = new AndroidDriverManager(propertyPath).getAndroidDriver(caps);
+			return driver;
+		}
+		return driver;
+	}
 
 }

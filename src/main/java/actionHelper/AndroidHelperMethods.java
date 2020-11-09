@@ -1,7 +1,12 @@
 package actionHelper;
 
+
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
+
+import java.util.List;
+
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -15,9 +20,40 @@ public class AndroidHelperMethods {
         this.driver = driver;
     }
 
+    public void waitForElementClickable(MobileElement element)
+   	{
+    	waitForElementPresent(driver,120,element);
+   	}
+    public void waitForElementClickable(WebDriver driver, int timeInSeconds, WebElement ele)
+   	{
+   		try {
+   			WebDriverWait wait = new WebDriverWait(driver, timeInSeconds );
+   			wait.until(ExpectedConditions.elementToBeClickable(ele));
+
+   		} catch (TimeoutException e) {
+   			// TODO Auto-generated catch block
+   			System.out.println("Element "+ele+" is not ckickable.");
+   		}
+   	}
+    
+    
+    public void waitForElementPresent(WebDriver driver, int timeInSeconds, WebElement ele)
+	{
+		try {
+			WebDriverWait wait = new WebDriverWait(driver, timeInSeconds );
+			//wait.until(ExpectedConditions.visibilityOf(ele));
+			wait.until(ExpectedConditions.elementToBeClickable(ele));
+
+		} catch (TimeoutException e) {
+			// TODO Auto-generated catch block
+			System.out.println("Element "+ele+" is not Present.");
+		}
+	}
+    
     public void click(MobileElement element) {
+    	waitForElementPresent(driver,30,element);
         element.click();
-        System.out.println("Element is getting clicked");
+        //System.out.println("Element is getting clicked");
     }
 
     public void enter(MobileElement element, String input) {

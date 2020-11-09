@@ -39,11 +39,7 @@ public class BuyPage extends BasePageClass {
     MobileElement search_Property;
 
 
-    public void enterAutoSearch(String localities) throws Exception {
-        androidHelperMethods.WaitTillVisible(autoSearch);
-        androidHelperMethods.inputValuesSlowly(autoSearch, localities);
-        androidDriver.hideKeyboard();
-    }
+    
 
     public void click_three_Bhk() {
         androidHelperMethods.click(threebhk);
