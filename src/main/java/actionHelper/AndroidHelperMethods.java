@@ -1,7 +1,10 @@
 package actionHelper;
 
+
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
+
+import java.util.List;
 
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
@@ -17,7 +20,10 @@ public class AndroidHelperMethods {
         this.driver = driver;
     }
 
-    
+    public void waitForElementClickable(MobileElement element)
+   	{
+    	waitForElementPresent(driver,120,element);
+   	}
     public void waitForElementClickable(WebDriver driver, int timeInSeconds, WebElement ele)
    	{
    		try {
@@ -47,7 +53,7 @@ public class AndroidHelperMethods {
     public void click(MobileElement element) {
     	waitForElementPresent(driver,30,element);
         element.click();
-        System.out.println("Element is getting clicked");
+        //System.out.println("Element is getting clicked");
     }
 
     public void enter(MobileElement element, String input) {
