@@ -30,6 +30,7 @@ DriverManagerType : We have create an enum for Driver types and its definations
 ```
 ```bash
 DriverManager : In this class we are creating driver object on the Basis of DriverType  like DriverManagerType.Android,DriverManagerType.IOS
+Also, there is a method to launch the AndroidDriver based on different capabilities. 
 ```
 ##### listners : In this package we are using TestNg ITestlistner for creating report on the basis of Test result
 
@@ -59,7 +60,7 @@ ExtentManager :In this class we are using Extent api and  initialization of Exte
 BasePageClass :In this class we have initialize all the page classes using PagePafctory conecepts(PageFactory.initElements)
 ```
 ```bash
-HomePage,Login Page :In this class we have all the locators and associated methods.
+HomePage :In this class we have all the locators and associated methods.
 ```
 ##### TestCases : In this package all the TestCases is present.
 
