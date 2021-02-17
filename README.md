@@ -1,3 +1,4 @@
+
 # Appium-PageObject-Mobile-Automation
 
 Appium-PageObject-Java-Mobile-Automation-Framework
@@ -65,3 +66,20 @@ HomePage,Login Page :In this class we have all the locators and associated metho
 
 ```bash
 BaseTest :In this class we have initialize drivers and all the pages.
+=======
+# AppiumTVGame
+
+**Test Scope**
+
+```bash
+Open Playstore app on anndroid emulator.
+Type app name and install app from playstore.
+```
+
+
+**System Requirements**
+
+```bash
+Use Java 8.
+Appium Desktop client v1.18.2
+```
